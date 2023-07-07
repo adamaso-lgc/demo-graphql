@@ -12,8 +12,8 @@ public class User
         SurName = surName;
     }
 
-    public int Id { get; }
-    public string GamePlatformId { get; }
+    public int Id { get; set; }
+    public string GamePlatformId { get; set; }
     public string TeamId { get; set; }
     public string SectorId { get; set; }
     public string FirstName { get; set; }

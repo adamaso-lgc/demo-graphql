@@ -14,5 +14,38 @@ public sealed class UserRepository
 
     public IEnumerable<User> GetAllUsers()
         => _users.Values;
+    
+    public User CreateUser(User user)
+    {
+        _users[user.Id] = user;
+        return user;
+    }
+
+    public User UpdateUser(int id, User user)
+    {
+        if (_users.ContainsKey(id))
+        {
+            _users[id] = user;
+        }
+        else
+        {
+            throw new Exception($"User with id {id} does not exist.");
+        }
+
+        return user;
+    }
+
+    public User DeleteUser(int id)
+    {
+        if (_users.TryGetValue(id, out User value))
+        {
+            _users.Remove(id);
+            return value;
+        }
+        else
+        {
+            throw new Exception($"User with id {id} does not exist.");
+        }
+    }
 
 }
