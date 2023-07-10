@@ -1,10 +1,17 @@
+using HotChocolate.Subscriptions;
+
 namespace Demo.GraphQL;
 
 public class Mutation
 {
-    public UserPayload CreateUser(User user, [Service] UserRepository repository)
+    public async Task<UserPayload> CreateUser(
+        User user, 
+        [Service] UserRepository repository, 
+        [Service] ITopicEventSender eventSender,
+        CancellationToken cancellationToken)
     {
         var createdUser = repository.CreateUser(user);
+        await eventSender.SendAsync(nameof(CreateUser), user, cancellationToken);
         return new UserPayload(createdUser, "User successfully created.");
     }
 

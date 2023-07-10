@@ -6,10 +6,13 @@ builder.Services.AddSingleton<UserRepository>();
 builder.Services
     .AddGraphQLServer()
     .AddQueryType<Query>()
-    .AddMutationType<Mutation>();
+    .AddMutationType<Mutation>()
+    .AddSubscriptionType<Subscription>()
+    .AddInMemorySubscriptions();
 
 var app = builder.Build();
 
+app.UseWebSockets();
 app.MapGraphQL();
 
 app.Run();
