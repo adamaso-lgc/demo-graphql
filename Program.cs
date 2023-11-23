@@ -1,4 +1,5 @@
 using Demo.GraphQL;
+using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,11 +9,15 @@ builder.Services
     .AddQueryType<Query>()
     .AddMutationType<Mutation>()
     .AddSubscriptionType<Subscription>()
-    .AddInMemorySubscriptions();
+    .AddRedisSubscriptions((sp) => 
+        ConnectionMultiplexer.Connect(builder.Configuration["RedisConnection"]));
+
+builder.Services
+    .AddAWSLambdaHosting(LambdaEventSource.HttpApi);
 
 var app = builder.Build();
 
-app.UseWebSockets();
+//app.UseWebSockets();
 app.MapGraphQL();
 
 app.Run();

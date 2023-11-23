@@ -1,0 +1,30 @@
+service: graphql-api
+
+provider:
+  name: aws
+  region: us-east-1
+  stage: ${opt:stage, 'dev'}
+  httpApi:
+    payload: "2.0"
+  lambdaHashingVersion: 20201221
+  environment:
+    ASPNETCORE_ENVIRONMENT: Production
+
+functions:
+  api:
+    name: ${self:provider.stage}-demo-graphql
+    runtime: provided.al2
+    package:
+      artifact: dist/Demo.GraphQL.zip
+    handler: required-but-ignored
+    events:
+      - httpApi: "*"
+    vpc:
+      securityGroupIds:
+        - sg-03c9f348276c9cd1f
+      subnetIds:
+        - subnet-02a909d956eb5a745    
+        - subnet-0efedcdefdb9022af   
+        
+package:
+  individually: true

@@ -50,3 +50,17 @@ C:\src\learning\Demo.GraphQL\obj\Debug\net7.0\refint\Demo.GraphQL.dll
 C:\src\learning\Demo.GraphQL\obj\Debug\net7.0\Demo.GraphQL.pdb
 C:\src\learning\Demo.GraphQL\obj\Debug\net7.0\Demo.GraphQL.genruntimeconfig.cache
 C:\src\learning\Demo.GraphQL\obj\Debug\net7.0\ref\Demo.GraphQL.dll
+C:\src\learning\Demo.GraphQL\bin\Debug\net7.0\HotChocolate.Subscriptions.Redis.dll
+C:\src\learning\Demo.GraphQL\bin\Debug\net7.0\Pipelines.Sockets.Unofficial.dll
+C:\src\learning\Demo.GraphQL\bin\Debug\net7.0\StackExchange.Redis.dll
+C:\src\learning\Demo.GraphQL\bin\Debug\net7.0\appsettings.Production.json
+C:\src\learning\Demo.GraphQL\bin\Debug\net7.0\aws-lambda-tools-defaults.json
+C:\src\learning\Demo.GraphQL\bin\Debug\net7.0\bootstrap
+C:\src\learning\Demo.GraphQL\bin\Debug\net7.0\Amazon.Lambda.APIGatewayEvents.dll
+C:\src\learning\Demo.GraphQL\bin\Debug\net7.0\Amazon.Lambda.ApplicationLoadBalancerEvents.dll
+C:\src\learning\Demo.GraphQL\bin\Debug\net7.0\Amazon.Lambda.AspNetCoreServer.dll
+C:\src\learning\Demo.GraphQL\bin\Debug\net7.0\Amazon.Lambda.AspNetCoreServer.Hosting.dll
+C:\src\learning\Demo.GraphQL\bin\Debug\net7.0\Amazon.Lambda.Core.dll
+C:\src\learning\Demo.GraphQL\bin\Debug\net7.0\Amazon.Lambda.Logging.AspNetCore.dll
+C:\src\learning\Demo.GraphQL\bin\Debug\net7.0\Amazon.Lambda.RuntimeSupport.dll
+C:\src\learning\Demo.GraphQL\bin\Debug\net7.0\Amazon.Lambda.Serialization.SystemTextJson.dll

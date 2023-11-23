@@ -10,6 +10,7 @@ public class Mutation
         [Service] ITopicEventSender eventSender,
         CancellationToken cancellationToken)
     {
+        var topic = nameof(CreateUser);
         var createdUser = repository.CreateUser(user);
         await eventSender.SendAsync(nameof(CreateUser), user, cancellationToken);
         return new UserPayload(createdUser, "User successfully created.");

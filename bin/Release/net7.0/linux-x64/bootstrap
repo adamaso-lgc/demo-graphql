@@ -1,0 +1,3 @@
+#!/bin/bash
+
+${LAMBDA_TASK_ROOT}/Demo.GraphQL
